@@ -95,7 +95,7 @@ public class Usuarios_DAO {
     }
     
     public void eliminar(Usuarios_VO vo) throws SQLException {
-        PreparedStatement sentencia = cnn.prepareStatement("DELETE * FROM usuario WHERE Udusuario=?");
+        PreparedStatement sentencia = cnn.prepareStatement("DELETE * FROM usuario WHERE Idusuario=?");
         sentencia.setInt(1, vo.getIdUsuario());
         
         int res = sentencia.executeUpdate();
